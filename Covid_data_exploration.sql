@@ -64,7 +64,7 @@ where continent is not null
 group by location, population
 order by highest_death_rate  desc
 
---Listing countries with highest death count per population
+--Listing countries with highest death count
 
 select location,population, max(cast(total_deaths as int)) as total_death_count
 from DataAnalysis_project..Covid_data
