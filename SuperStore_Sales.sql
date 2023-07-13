@@ -1,5 +1,5 @@
 /*
-Sales Analysis of SuperStore Company
+Sales Analysis of SuperStore
 */
 
 /*Displaying top 10 rows from Customer table in Superstore_Sales database*/
