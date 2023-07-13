@@ -18,12 +18,6 @@ Insert into Superstore_Sales..Product values('CA-2018-100314','OFF-LA-10001569',
 Update Superstore_Sales..Product
 set Sales='7.968' WHERE OrderID = 'CA-2018-100314'
 
-/*Combining all data together from both Customer and Product table*/
-
-Select * from Superstore_Sales.dbo.Customer cs
-INNER JOIN Superstore_Sales..Product pt
-ON cs.[OrderID]=pt.[OrderID]
-
 /*Lists the Category of products with the highest sales amount*/
 
 Select Category,SUM(Sales) as TotalSalesAmount from Superstore_Sales.dbo.Product
