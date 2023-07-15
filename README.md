@@ -1,13 +1,17 @@
 ## Portfolio_Projects
 
+### SuperStore_Sales.sql
+
+    - This project is about the analysis of SuperStore's product sales during 2018–2019.  
+
 ### Bike Sales.xlsx
 
-    - This project deals with the analysis of Bike sales on the regions Europe, North America and Pacific.
-### Covid_data_exploration.sql
-
-    - This project is about the exploration and analysis of covid dataset which includes covid deaths and details of people vaccinated during 2020-2022.
-     
+    - This project deals with the Bike sales analysis for the regions of Europe, North America, and the Pacific.
+  
 ### Movie_data_analysis.ipynb
 
-    - This project deals with the analysis of a movie dataset consisting of hollywood movies released in the period 1980 -2020.   
+    - This project focuses on the analysis of the gross revenue of Hollywood movies released in the period 1980–2020.
 
+### Covid_data_exploration.sql
+
+    - This project is about the exploration of the COVID dataset, which includes COVID deaths and details of people vaccinated during 2020–2022.
