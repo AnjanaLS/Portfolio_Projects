@@ -35,13 +35,13 @@ order by TotalSalesAmount desc
 
 /* Top 10 customers with highest purchase amount */
 
-With Customer as(
+With Customers as(
 Select top 10 CustomerName,sum(Sales) as Purchased_Amount from Superstore_Sales.dbo.Customer cs
 INNER JOIN Superstore_Sales..Product pt
 ON cs.[OrderID]=pt.[OrderID] 
 group by CustomerName 
 order by Purchased_Amount desc)
-select * from Customer
+select * from Customers
 
 /*Count of products sold in terms of subcategory*/
 
