@@ -1,5 +1,5 @@
 /*
-Sales Analysis of SuperStore
+Sales Analysis of SuperStore Company
 */
 
 /*Displaying top 10 rows from Customer table in Superstore_Sales database*/
@@ -18,11 +18,20 @@ Insert into Superstore_Sales..Product values('CA-2018-100314','OFF-LA-10001569',
 Update Superstore_Sales..Product
 set Sales='7.968' WHERE OrderID = 'CA-2018-100314'
 
+
 /*Lists the Category of products with the highest sales amount*/
 
 Select Category,SUM(Sales) as TotalSalesAmount from Superstore_Sales.dbo.Product
 group by Category
 Order by TotalSalesAmount desc
+
+
+/*Count of products sold in terms of subcategory*/
+
+select SubCategory,Count(SubCategory) as TotalSold from Superstore_Sales..Product 
+Group by SubCategory
+order by TotalSold desc
+
 
 /* Total selling price of products on different States */
 
@@ -43,15 +52,6 @@ group by CustomerName
 order by Purchased_Amount desc)
 select * from Customers
 
-/*Count of products sold in terms of subcategory*/
-
-select SubCategory,Count(SubCategory) as TotalSold from Superstore_Sales.dbo.Customer cs
-INNER JOIN Superstore_Sales..Product pt
-ON cs.[OrderID]=pt.[OrderID] 
-Group by SubCategory
-order by TotalSold desc
-
-
 /* Months having biggest sales */
 
 Create View MonthlySalesAmount as
@@ -70,7 +70,6 @@ group by SubCategory
 order by TotalSalesAmount desc
 
 /*Categorizing sales of each Product in to huge ,medium and low based on the total amount sold*/
-
 Create Procedure Sales_Info 
 as
 Drop table if exists Sales_Type
@@ -82,9 +81,7 @@ CASE
 	 WHEN SUM(Sales) >=10000 then 'Medium Sales'
 	 WHEN SUM(Sales) <10000 then 'Low Sales'
 END AS SalesCategory
-from Superstore_Sales..Customer cs
-INNER JOIN Superstore_Sales..Product pt
-ON cs.[OrderID]=pt.[OrderID] 
+from Superstore_Sales..Product
 group by SubCategory
 select * from Sales_Type order by SalesCategory
 
