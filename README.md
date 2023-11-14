@@ -11,7 +11,3 @@
 ### Movie_data_analysis.ipynb
 
     - This project focuses on the analysis of the gross revenue of Hollywood movies released in the period 1980–2020.
-
-### Covid_data_exploration.sql
-
-    - This project is about the exploration of the COVID dataset, which includes COVID deaths and details of people vaccinated during 2020–2022.
