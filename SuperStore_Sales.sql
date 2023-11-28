@@ -10,15 +10,6 @@ Select TOP 10 * from Superstore_Sales.dbo.Customer
 
 SELECT TOP 10 * FROM Superstore_Sales..Product 
 
-/*Inserting, deleting and updating details in Product table*/
-
-Delete from Superstore_Sales..Product  
-WHERE OrderID = 'CA-2018-100314'
-Insert into Superstore_Sales..Product values('CA-2018-100314','OFF-LA-10001569','Office Supplies','Labels','Avery 499',null)
-Update Superstore_Sales..Product
-set Sales='7.968' WHERE OrderID = 'CA-2018-100314'
-
-
 /*Lists the Category of products with the highest sales amount*/
 
 Select Category,SUM(Sales) as TotalSalesAmount from Superstore_Sales.dbo.Product
