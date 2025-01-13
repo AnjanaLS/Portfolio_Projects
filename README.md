@@ -3,6 +3,7 @@
 ### SuperStore_Sales.sql
 
     - This project is about the analysis of SuperStore's product sales during 2018–2019.  
+    - Power BI dashboard link : https://www.novypro.com/project/superstore-sales-power-bi
 
 ### Bike Sales.xlsx
 
